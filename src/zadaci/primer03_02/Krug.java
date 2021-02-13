@@ -12,4 +12,7 @@ public class Krug extends Oblik {
 	
 	@Override
 	public void setPovrsina() { super.povrsina = r * r * Math.PI; }
+	
+	@Override
+	public void setObim()	  { super.obim = 2 * r * Math.PI;	  }
 }

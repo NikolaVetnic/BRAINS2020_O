@@ -12,4 +12,7 @@ public class Kvadrat extends Oblik {
 	
 	@Override
 	public void setPovrsina() { super.povrsina = a * a; }
+	
+	@Override
+	public void setObim()	  { super.obim = 4 * a; 	}
 }
