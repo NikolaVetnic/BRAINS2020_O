@@ -2,12 +2,8 @@ package zadaci.primer02_02;
 
 public class Vozilo implements Comparable<Vozilo> {
 
-	private String marka;
-	private String tip;
-	private int godiste;
-	private String registracija;
-	private int maksBrzina;
-	private int snaga;
+	private String marka, tip, registracija;
+	private int godiste, maksBrzina, snaga;
 	
 	public Vozilo(String marka, String tip, int godiste, String registracija, int maksBrzina, int snaga) {
 		this.marka = marka;
@@ -23,7 +19,7 @@ public class Vozilo implements Comparable<Vozilo> {
 	}
 	
 	public double vrednost() { 
-		return 1.0 * maksBrzina * snaga / (2017 - godiste); 
+		return 100.0 * maksBrzina * snaga / (2021 - godiste); 
 	}
 	
 	public String toString() {

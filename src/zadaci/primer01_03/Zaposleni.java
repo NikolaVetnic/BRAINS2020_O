@@ -5,6 +5,12 @@ public class Zaposleni {
 	private String ime, prezime;
 	private double koefRadnogMesta;
 	
+	public Zaposleni() {
+		this.ime = "";
+		this.prezime = "";
+		this.koefRadnogMesta = 0.0;
+	}
+	
 	public Zaposleni(String ime, String prezime, double koefRadnogMesta) {
 		this.ime = ime;
 		this.prezime = prezime;
