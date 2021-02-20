@@ -32,6 +32,10 @@ public class Racunar implements Comparable<Racunar> {
 		setIndeksPerformansi();
 	}
 	
+	public String procesor() 					{ return this.procesor; 			}
+	public double radniTakt()					{ return this.radniTakt;			}
+	public int kapacitetMemorije()				{ return this.kapacitetMemorije;	}
+	
 	public String toString() {
 		return "[ CPU " + procesor + " ; takt " + radniTakt + " ; RAM " 
 				+ kapacitetMemorije + " ; indeks performansi " + indeksPerformansi + " ]";

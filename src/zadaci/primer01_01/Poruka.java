@@ -8,10 +8,10 @@ public class Poruka {
 		this.tekst = tekst;
 	}
 	
-	public void setTekst(String tekst) { this.tekst = tekst; }
-	public String tekst() { return this.tekst; }
+	public void setTekst(String tekst) 	{ this.tekst = tekst; 	}
+	public String tekst() 				{ return this.tekst; 	}
 	
 	public String toString() {
-		return tekst;
+		return tekst();
 	}
 }
