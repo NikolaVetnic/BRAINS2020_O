@@ -1,4 +1,4 @@
-package zadaci.primer04_01;
+package zadaci.s109;
 
 public class Racunar implements Comparable<Racunar> {
 

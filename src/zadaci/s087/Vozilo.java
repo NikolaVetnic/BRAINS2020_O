@@ -6,6 +6,7 @@ public class Vozilo {
 	protected String marka, tip, registracija;
 	protected int godiste;
 	protected Osoba vlasnik;
+	protected Motor pogAgregat;
 	
 	
 	public Vozilo(String marka, String tip, String registracija, int godiste) {
