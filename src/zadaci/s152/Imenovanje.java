@@ -1,4 +1,4 @@
-package zadaci.primer06_01;
+package zadaci.s152;
 
 public interface Imenovanje {
 

@@ -1,8 +1,7 @@
-package zadaci.s109;
+package zadaci.s128;
 
 public class Osoba {
 
-	
 	protected String ime;
 	protected String prezime;
 	protected int starost;

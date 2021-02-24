@@ -1,19 +1,19 @@
-package zadaci.primer06_01;
+package zadaci.s152;
 
-public class Poslasticarnica extends Prodavnica implements Imenovanje {
-
+public class Picerija extends Prodavnica implements Imenovanje {
+	
 	private String imeKompanije;
 	private String adresaKompanije;
 	
-	private String[] stavkaMenija = {
-			"Sladoled",
-			"Torta",
-			"Krofna",
-			"Kafa",
-			"Caj",
-			"Limunada"
+	private String[] ponudaHrane = {
+			"Pica",
+			"Pasta",
+			"Salata",
+			"Kalcona",
+			"Sok",
+			"Pivo"
 	};
-	
+
 	@Override
 	public String pribaviIme() {
 		return imeKompanije;
@@ -26,7 +26,7 @@ public class Poslasticarnica extends Prodavnica implements Imenovanje {
 
 	@Override
 	public String[] uzmiInventar() {
-		return stavkaMenija;
+		return ponudaHrane;
 	}
 
 	@Override
