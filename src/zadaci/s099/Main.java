@@ -1,4 +1,4 @@
-package zadaci.primer03_02;
+package zadaci.s099;
 
 public class Main {
 

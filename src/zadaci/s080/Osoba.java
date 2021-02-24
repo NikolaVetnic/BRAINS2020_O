@@ -1,4 +1,4 @@
-package zadaci.primer03_01;
+package zadaci.s080;
 
 public class Osoba {
 
