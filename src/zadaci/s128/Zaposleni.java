@@ -1,6 +1,6 @@
 package zadaci.s128;
 
-public class Zaposleni extends Osoba {
+abstract class Zaposleni extends Osoba {
 
 	private static final int DEFAULT_BROJ_DANA = 20;
 	

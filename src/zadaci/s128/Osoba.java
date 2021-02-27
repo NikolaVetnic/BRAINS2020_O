@@ -1,6 +1,6 @@
 package zadaci.s128;
 
-public class Osoba {
+abstract class Osoba {
 
 	protected String ime;
 	protected String prezime;

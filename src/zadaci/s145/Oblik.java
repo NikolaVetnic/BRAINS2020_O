@@ -1,43 +1,36 @@
-package zadaci.s099;
+package zadaci.s145;
 
 public abstract class Oblik {
 
 	
 	protected String boja, tip;
-	protected int brojStrana;
 	protected double obim, povrsina;
 	
 	
-	public Oblik(String boja, String tip, int brojStrana) {
+	public Oblik(String boja, String tip) {
 		this.boja = boja;
 		this.tip = tip;
-		this.brojStrana = brojStrana;
-		setObim();
-		setPovrsina();
+		this.obim = -1.0;
+		this.povrsina = -1.0;
 	}
 
 	
 	public Oblik() {
-		this("", "", 0);
+		this("", "");
 	}
 
 	
 	public String boja() 		{ return boja; 			}
 	public String tip() 		{ return tip; 			}
-	public int brojStrana() 	{ return brojStrana; 	}
 	public double povrsina() 	{ return povrsina; 		}
 
 	
 	public void setBoja(String boja) 			{ this.boja = boja; 			}
 	public void setTip(String tip) 				{ this.tip = tip; 				}
-	public void setBrojStrana(int brojStrana) 	{ this.brojStrana = brojStrana; }
-	
-	
-	abstract void setPovrsina();
-	abstract void setObim();
 	
 	
 	public String toString() {
-		return tip + " " + boja + " " + brojStrana + " " + povrsina;
+//		return tip + "\t" + boja + "\t" + povrsina;
+		return String.format("%8s %8s %8.2f", tip, boja, povrsina);
 	}
 }

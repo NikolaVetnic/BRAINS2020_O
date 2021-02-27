@@ -18,15 +18,17 @@ public class Main {
 		
 		System.out.println("VLASNISTVA");
 		
-		Automobil a = new Automobil("Marka", "Tip", "Registracija", 2000, 5);
+		Motor mtr = new Motor(false, "Tip motora", 20, 20);
+		
+		Vozilo a = new Automobil("Marka", "Tip", "Registracija", 2000, 5, mtr);
 		a.setVlasnik(k1);
 		System.out.println("Vlasnik automobila : " + a.vlasnik);
 		
-		Motocikl m = new Motocikl("Marka", "Tip", "Registracija", 2000, true);
+		Vozilo m = new Motocikl("Marka", "Tip", "Registracija", 2000, true, mtr);
 		m.setVlasnik(k2);
 		System.out.println("Vlasnik motocikla : " + m.vlasnik);
 		
-		Kamion k = new Kamion("Marka", "Tip", "Registracija", 2000, 4);
+		Vozilo k = new Kamion("Marka", "Tip", "Registracija", 2000, 4, mtr);
 		k.setVlasnik(k1);
 		System.out.println("Vlasnik kamiona : " + k.vlasnik);
 		System.out.println();
@@ -37,5 +39,17 @@ public class Main {
 		
 		System.out.println("Automobil : " + a);
 		System.out.println("Motocikl  : " + m);
+		
+		Automobil b = (Automobil) a;
+		
+		a.ukljuci();
+		a.ukljuci();
+		a.iskljuci();
+		a.iskljuci();
+		
+		a.ukljuci();
+		a.ubrzaj(150);	System.out.println("Brzina : " + a.brzina());
+		a.ubrzaj(20);	System.out.println("Brzina : " + a.brzina());
+		a.ubrzaj(100);	System.out.println("Brzina : " + a.brzina());
 	}
 }
