@@ -2,7 +2,9 @@ package zadaci.s087;
 
 abstract class Vozilo implements Voznja {
 
+	
 	private static final double MAX_BRZINA = 50.0;
+	
 	
 	protected String marka, tip, registracija;
 	protected int godiste, stepenPrenosa;
@@ -44,7 +46,7 @@ abstract class Vozilo implements Voznja {
 		return String.format("%-10s %-10s %-10s %4d [ %-10s %-10s ]", 
 				marka(), tip(), registracija(), godiste(), vlasnik().ime(), vlasnik().prezime());
 	}
-
+	
 	@Override
 	public void povecajStepenPrenosa() {
 		if (stepenPrenosa == 5)
@@ -52,7 +54,7 @@ abstract class Vozilo implements Voznja {
 		
 		stepenPrenosa++;
 	}
-
+	
 	@Override
 	public void smanjiStepenPrenosa() {
 		if (stepenPrenosa == 0)
@@ -60,7 +62,7 @@ abstract class Vozilo implements Voznja {
 		
 		stepenPrenosa--;
 	}
-
+	
 	@Override
 	public void ubrzaj(double b) {
 		
