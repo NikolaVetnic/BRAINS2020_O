@@ -34,13 +34,13 @@ public class Motor {
 	
 	
 	public void ukljuci() {
-		if (radi())
+		if (!radi())
 			this.setRadi(true);
 	}
 	
 	
 	public void iskljuci() {
-		if (this.radi())
+		if (radi())
 			setRadi(false);
 	}
 	
