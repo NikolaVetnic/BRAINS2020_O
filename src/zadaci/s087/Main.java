@@ -50,6 +50,6 @@ public class Main {
 		a.ukljuci();
 		a.ubrzaj(150);	System.out.println("Brzina : " + a.brzina());
 		a.ubrzaj(20);	System.out.println("Brzina : " + a.brzina());
-		a.ubrzaj(100);	System.out.println("Brzina : " + a.brzina());
+		a.ubrzaj(150);	System.out.println("Brzina : " + a.brzina());
 	}
 }
