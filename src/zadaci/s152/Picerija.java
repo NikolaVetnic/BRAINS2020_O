@@ -15,6 +15,11 @@ public class Picerija extends Prodavnica implements Imenovanje {
 			"Sok",
 			"Pivo"
 	};
+	
+	
+	public Picerija() {
+		super(SpisakOsoba.PODRAZUMEVAN_KAPACITET);
+	}
 
 	@Override
 	public String pribaviImeProdavnice() {

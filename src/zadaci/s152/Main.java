@@ -25,5 +25,35 @@ public class Main {
 		k.postaviImeProdavnice("Bulevar Books");
 		k.postaviAdresu("Kod Brauhausa");
 		k.nabaviInventar("Crveni Mars");
+		
+		System.out.println("\n\n\n");
+		
+		int sw = 1;
+		
+		Prodavnica curr = null;
+		
+		switch (sw) {
+			case 0: curr = carigrad; 	break;
+			case 1: curr = ciao; 		break;
+			case 2: curr = r; 			break;
+			case 3: curr = k; 			break;
+		}
+		
+		System.out.println(curr);
+			
+		curr.dodajKlijenta("Nikola", "Vetnic", 36);
+		curr.dodajKlijenta("Nikola", "Babic", 36);
+		curr.dodajKlijenta("Nikola", "Selakovic", 36);
+		curr.sortirajKlijente();
+		curr.stampajKlijente();
+		
+		System.out.println();
+		
+		curr.izbaciKlijenta("Nikola", "Vetnic");
+		curr.stampajKlijente();
+		
+		curr.setStanjeRacuna(1000);
+		System.out.println("Stanje racuna : " + curr.prikaziStanjeRacuna());
+		curr.potrosiInventar("Artikal");
 	}
 }

@@ -14,6 +14,12 @@ public class Poslasticarnica extends Prodavnica implements Imenovanje {
 			"Limunada"
 	};
 	
+	
+	public Poslasticarnica() {
+		super(SpisakOsoba.PODRAZUMEVAN_KAPACITET);
+	}
+
+	
 	@Override
 	public String pribaviImeProdavnice() {
 		return imeKompanije;

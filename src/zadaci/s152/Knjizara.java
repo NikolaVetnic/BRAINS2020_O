@@ -17,6 +17,10 @@ public class Knjizara extends Prodavnica implements Imenovanje {
 			"Plavi Mars"
 	};
 	
+	public Knjizara() {
+		super(SpisakOsoba.PODRAZUMEVAN_KAPACITET);
+	}
+	
 	@Override
 	public String pribaviImeProdavnice() {
 		return imeKompanije;
@@ -45,5 +49,9 @@ public class Knjizara extends Prodavnica implements Imenovanje {
 
 	public void postaviAdresu(String adresa) {
 		this.adresaKompanije = adresa;
+	}
+	
+	public String toString() {
+		return imeKompanije + " " + adresaKompanije;
 	}
 }

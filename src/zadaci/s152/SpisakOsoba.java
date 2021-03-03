@@ -3,7 +3,7 @@ package zadaci.s152;
 public class SpisakOsoba {
 
 	
-	private static final int PODRAZUMEVAN_KAPACITET = 100; 
+	public static final int PODRAZUMEVAN_KAPACITET = 100; 
 
 	
 	private Osoba[] osobe;
@@ -23,21 +23,49 @@ public class SpisakOsoba {
 	}
 	
 	
-	public Osoba nadjiOsobu(String ime, String prezime) {
+	public Osoba[] osobe() 			{ return osobe; 			}
+	public Osoba osoba(int i) 		{ return osobe[i]; 			}
+	public int trenutniBrojOsoba() 	{ return trenutniBrojOsoba; }
+	
+	
+	public int nadjiOsobu(String ime, String prezime) {
 		for (int i = 0; i < this.trenutniBrojOsoba; i++)
 			if (this.osobe[i].ime().equals(ime) && this.osobe[i].prezime().equals(prezime))
-				return this.osobe[i];
+				return i;
 		
 		System.out.println("Osoba nije pronadjena!");
-		return null;
+		return -1;
 	}
 	
 	
-	public void dodajOsobu(Osoba o) {
+	public void sort() {
+		SortiranjeSpiska.quicksort(this);
+	}
+	
+	
+	public boolean dodajOsobu(Osoba o) {
 		
-		if (this.trenutniBrojOsoba < this.maxBrojOsoba)
+		if (this.trenutniBrojOsoba < this.maxBrojOsoba) {
 			this.osobe[this.trenutniBrojOsoba++] = o;
-		else
+			return true;
+		} else {
 			System.out.println("Nema vise mesta u spisku osoba!");
+			return false;
+		}
+	}
+	
+	
+	public boolean izbaciOsobu(String ime, String prezime) {
+		
+		int idx = nadjiOsobu(ime, prezime);
+		
+		if (idx == -1) return false;
+		
+		for (int i = idx; i < trenutniBrojOsoba - 1; i++)
+			osobe[i] = osobe[i + 1];
+		
+		trenutniBrojOsoba--;
+		
+		return true;
 	}
 }

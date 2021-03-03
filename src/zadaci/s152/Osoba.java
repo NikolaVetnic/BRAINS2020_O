@@ -1,6 +1,6 @@
 package zadaci.s152;
 
-abstract class Osoba {
+abstract class Osoba implements Comparable<Osoba> {
 
 	protected String ime;
 	protected String prezime;
@@ -24,5 +24,13 @@ abstract class Osoba {
 	
 	public String toString() {
 		return "Ime: " + this.ime + " Prezime: " + this.prezime + " Starost: " + this.starost + " godina";
+	}
+
+	@Override
+	public int compareTo(Osoba o) {
+		int res = prezime().compareTo(o.prezime());
+		
+		if (res != 0) 	return res;
+		else 			return ime().compareTo(o.ime());
 	}
 }

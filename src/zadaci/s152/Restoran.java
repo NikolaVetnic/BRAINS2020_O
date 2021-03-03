@@ -14,6 +14,10 @@ public class Restoran extends Prodavnica implements Imenovanje {
 			"Skembici"
 	};
 	
+	public Restoran() {
+		super(SpisakOsoba.PODRAZUMEVAN_KAPACITET);
+	}
+	
 	@Override
 	public String pribaviImeProdavnice() {
 		return imeKompanije;
@@ -40,5 +44,9 @@ public class Restoran extends Prodavnica implements Imenovanje {
 
 	public void postaviAdresu(String adresa) {
 		this.adresaKompanije = adresa;
+	}
+	
+	public String toString() {
+		return imeKompanije + " " + adresaKompanije;
 	}
 }
