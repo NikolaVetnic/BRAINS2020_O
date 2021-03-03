@@ -1,26 +1,29 @@
-package zadaci.s152;
+package zadaci.s152.prodavnice;
 
-public class Picerija extends Prodavnica implements Imenovanje {
-	
-	
+import zadaci.s152.osobe.SpisakOsoba;
+
+public class Poslasticarnica extends Prodavnica implements Imenovanje {
+
 	private String imeKompanije;
 	private String adresaKompanije;
 	
-	
-	private String[] ponudaHrane = {
-			"Pica",
-			"Pasta",
-			"Salata",
-			"Kalcona",
-			"Sok",
-			"Pivo"
+	private String[] stavkaMenija = {
+			"Sladoled",
+			"Torta",
+			"Krofna",
+			"Kafa",
+			"Caj",
+			"Limunada"
 	};
 	
 	
-	public Picerija() {
-		super(SpisakOsoba.PODRAZUMEVAN_KAPACITET);
+	public Poslasticarnica(String imeKompanije, String adresaKompanije) {
+		super(SpisakOsoba.PODRAZUMEVAN_KAPACITET, SpisakOsoba.PODRAZUMEVAN_KAPACITET);
+		this.imeKompanije = imeKompanije;
+		this.adresaKompanije = adresaKompanije;
 	}
 
+	
 	@Override
 	public String pribaviImeProdavnice() {
 		return imeKompanije;
@@ -33,7 +36,7 @@ public class Picerija extends Prodavnica implements Imenovanje {
 
 	@Override
 	public String[] uzmiIzInventara() {
-		return ponudaHrane;
+		return stavkaMenija;
 	}
 
 	@Override

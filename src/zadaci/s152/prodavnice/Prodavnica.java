@@ -1,4 +1,8 @@
-package zadaci.s152;
+package zadaci.s152.prodavnice;
+
+import zadaci.s152.osobe.SpisakKlijenata;
+import zadaci.s152.osobe.SpisakZaposlenih;
+import zadaci.s152.osobe.Zaposleni;
 
 public abstract class Prodavnica implements Finansije, Logistika {
 
@@ -11,8 +15,9 @@ public abstract class Prodavnica implements Finansije, Logistika {
 	Prodavnica() {}
 	
 	
-	Prodavnica(int maxBrojKlijenata){
-		this.spisakKlijenata = new SpisakKlijenata(maxBrojKlijenata);
+	Prodavnica(int maxBrojKlijenata, int maxBrojZaposlenih){
+		this.spisakKlijenata 	= new SpisakKlijenata(maxBrojKlijenata);
+		this.spisakZaposlenih	= new SpisakZaposlenih(maxBrojZaposlenih);
 	}
 	
 	
@@ -20,8 +25,12 @@ public abstract class Prodavnica implements Finansije, Logistika {
 	 *  KLIJENTI  *
 	 **************/
 	
-	public boolean dodajKlijenta(String ime, String prezime, int starost) {
-		return spisakKlijenata.dodajKlijenta(ime, prezime, starost);
+	public boolean dodajKlijenta(String ime, String prezime, String jmbg) {
+		return spisakKlijenata.dodajKlijenta(ime, prezime, jmbg);
+	}
+	
+	public void ucitajKlijente(String input) {
+		spisakKlijenata.ucitaj(input);
 	}
 	
 	public boolean izbaciKlijenta(String ime, String prezime) {
@@ -29,11 +38,40 @@ public abstract class Prodavnica implements Finansije, Logistika {
 	}
 	
 	public void sortirajKlijente() {
-		this.spisakKlijenata.sort();
+		spisakKlijenata.sort();
 	}
 
 	public void stampajKlijente() {
 		spisakKlijenata.stampaj();
+	}
+	
+	
+	/***************
+	 *  ZAPOSLENI  *
+	 ***************/
+	
+	public boolean dodajZaposlenog(String ime, String prezime, String jmbg, double koefRadnogMesta) {
+		return spisakZaposlenih.dodajZaposlenog(ime, prezime, jmbg, koefRadnogMesta);
+	}
+	
+	public void ucitajZaposlene(String input) {
+		spisakZaposlenih.ucitaj(input);
+	}
+	
+	public boolean izbaciZaposlenog(String ime, String prezime) {
+		return spisakZaposlenih.izbaciZaposlenog(ime, prezime);
+	}
+
+	public boolean izbaciZaposlenog(String jmbg) {
+		return spisakZaposlenih.izbaciZaposlenog(jmbg);
+	}
+	
+	public void sortirajZaposlene() {
+		spisakZaposlenih.sort();
+	}
+
+	public void stampajZaposlene() {
+		spisakZaposlenih.stampaj();
 	}
 	
 	

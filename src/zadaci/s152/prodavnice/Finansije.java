@@ -1,4 +1,6 @@
-package zadaci.s152;
+package zadaci.s152.prodavnice;
+
+import zadaci.s152.osobe.Zaposleni;
 
 public interface Finansije {
 	int obracunajPlate(Zaposleni[] spisakZaposlenih);   // vraca broj zaposlenih za koje je izvrsen obracun

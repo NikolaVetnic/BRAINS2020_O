@@ -1,4 +1,6 @@
-package zadaci.s152;
+package zadaci.s152.osobe;
+
+import zadaci.s152.util.QuickSort;
 
 public class SpisakOsoba {
 
@@ -26,6 +28,7 @@ public class SpisakOsoba {
 	public Osoba[] osobe() 			{ return osobe; 			}
 	public Osoba osoba(int i) 		{ return osobe[i]; 			}
 	public int trenutniBrojOsoba() 	{ return trenutniBrojOsoba; }
+	public int maxBrojOsoba() 		{ return maxBrojOsoba; 		}
 	
 	
 	public int nadjiOsobu(String ime, String prezime) {
@@ -38,8 +41,18 @@ public class SpisakOsoba {
 	}
 	
 	
+	public int nadjiOsobu(String jmbg) {
+		for (int i = 0; i < this.trenutniBrojOsoba; i++)
+			if (this.osobe[i].jmbg().equals(jmbg))
+				return i;
+		
+		System.out.println("Osoba nije pronadjena!");
+		return -1;
+	}
+	
+	
 	public void sort() {
-		SortiranjeSpiska.quicksort(this);
+		QuickSort.quicksort(this.osobe(), 0, this.trenutniBrojOsoba() - 1);
 	}
 	
 	
@@ -57,7 +70,17 @@ public class SpisakOsoba {
 	
 	public boolean izbaciOsobu(String ime, String prezime) {
 		
-		int idx = nadjiOsobu(ime, prezime);
+		return izbaciOsobu(nadjiOsobu(ime, prezime));
+	}
+
+	
+	public boolean izbaciOsobu(String jmbg) {
+		
+		return izbaciOsobu(nadjiOsobu(jmbg));
+	}
+	
+	
+	private boolean izbaciOsobu(int idx) {
 		
 		if (idx == -1) return false;
 		
@@ -67,5 +90,16 @@ public class SpisakOsoba {
 		trenutniBrojOsoba--;
 		
 		return true;
+	}
+	
+	
+	public void stampaj(String label) {
+		
+		System.out.println(label + ", spisak : ");
+		
+		for (int i = 0; i < trenutniBrojOsoba(); i++)
+			System.out.println(osoba(i));
+		
+		System.out.println();
 	}
 }

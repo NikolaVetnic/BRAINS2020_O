@@ -1,59 +1,30 @@
 package zadaci.s152;
 
+import zadaci.s152.prodavnice.Knjizara;
+import zadaci.s152.prodavnice.Picerija;
+import zadaci.s152.prodavnice.Poslasticarnica;
+import zadaci.s152.prodavnice.Prodavnica;
+import zadaci.s152.prodavnice.Restoran;
+
 public class Main {
+	
+	
+	static Prodavnica[] p = {
+			new Poslasticarnica	("Carigrad", 		"Preko puta izvrsnog veca"	),
+			new Picerija		("Ciao", 			"Kod Socijalnog"			),
+			new Knjizara		("Zal za mladost", 	"Ka Futogu"					),
+			new Restoran		("Bulevar Books", 	"Kod Brauhausa"				),
+	};
+	
 
 	public static void main(String[] args) {
 		
-		Poslasticarnica carigrad = new Poslasticarnica();
-		carigrad.postaviImeProdavnice("Carigrad");
-		carigrad.nabaviInventar("Sladoled");
-		carigrad.postaviAdresu("Preko puta Izvrsnog veca");
-		System.out.println(carigrad);
-
-		Picerija ciao = new Picerija();
-		ciao.postaviImeProdavnice("Ciao");
-		ciao.nabaviInventar("Pica");
-		ciao.postaviAdresu("Kod Socijalnog");
-		System.out.println(ciao);
+		Prodavnica curr = p[1];
+		curr.ucitajKlijente("s152_spisakKlijenata");
+		curr.ucitajZaposlene("s152_spisakZaposlenih");
 		
-		Restoran r = new Restoran();
-		r.postaviImeProdavnice("Zal za mladost");
-		r.postaviAdresu("Ka Futogu");
-		r.nabaviInventar("Karadjordjeva");
-		
-		Knjizara k = new Knjizara();
-		k.postaviImeProdavnice("Bulevar Books");
-		k.postaviAdresu("Kod Brauhausa");
-		k.nabaviInventar("Crveni Mars");
-		
-		System.out.println("\n\n\n");
-		
-		int sw = 1;
-		
-		Prodavnica curr = null;
-		
-		switch (sw) {
-			case 0: curr = carigrad; 	break;
-			case 1: curr = ciao; 		break;
-			case 2: curr = r; 			break;
-			case 3: curr = k; 			break;
-		}
-		
-		System.out.println(curr);
-			
-		curr.dodajKlijenta("Nikola", "Vetnic", 36);
-		curr.dodajKlijenta("Nikola", "Babic", 36);
-		curr.dodajKlijenta("Nikola", "Selakovic", 36);
-		curr.sortirajKlijente();
+		System.out.println(curr.toString().toUpperCase() + "\n");
 		curr.stampajKlijente();
-		
-		System.out.println();
-		
-		curr.izbaciKlijenta("Nikola", "Vetnic");
-		curr.stampajKlijente();
-		
-		curr.setStanjeRacuna(1000);
-		System.out.println("Stanje racuna : " + curr.prikaziStanjeRacuna());
-		curr.potrosiInventar("Artikal");
+		curr.stampajZaposlene();
 	}
 }

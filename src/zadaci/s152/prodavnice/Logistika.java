@@ -1,4 +1,4 @@
-package zadaci.s152;
+package zadaci.s152.prodavnice;
 
 public interface Logistika {
 	void nabaviInventar(String artikal);

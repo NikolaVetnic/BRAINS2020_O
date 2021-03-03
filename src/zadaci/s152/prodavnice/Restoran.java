@@ -1,4 +1,6 @@
-package zadaci.s152;
+package zadaci.s152.prodavnice;
+
+import zadaci.s152.osobe.SpisakOsoba;
 
 public class Restoran extends Prodavnica implements Imenovanje {
 
@@ -14,8 +16,10 @@ public class Restoran extends Prodavnica implements Imenovanje {
 			"Skembici"
 	};
 	
-	public Restoran() {
-		super(SpisakOsoba.PODRAZUMEVAN_KAPACITET);
+	public Restoran(String imeKompanije, String adresaKompanije) {
+		super(SpisakOsoba.PODRAZUMEVAN_KAPACITET, SpisakOsoba.PODRAZUMEVAN_KAPACITET);
+		this.imeKompanije = imeKompanije;
+		this.adresaKompanije = adresaKompanije;
 	}
 	
 	@Override

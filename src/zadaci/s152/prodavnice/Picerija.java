@@ -1,26 +1,30 @@
-package zadaci.s152;
+package zadaci.s152.prodavnice;
 
-public class Knjizara extends Prodavnica implements Imenovanje {
+import zadaci.s152.osobe.SpisakOsoba;
 
+public class Picerija extends Prodavnica implements Imenovanje {
+	
+	
 	private String imeKompanije;
 	private String adresaKompanije;
 	
-	private String[] ponudaKnjiga = {
-			"Dina",
-			"Mesija Dine",
-			"Deca Dine",
-			"Bozanski Car Dine",
-			"Jeretici Dine",
-			"Kapitol Dina",
-			"Crveni Mars",
-			"Zeleni Mars",
-			"Plavi Mars"
+	
+	private String[] ponudaHrane = {
+			"Pica",
+			"Pasta",
+			"Salata",
+			"Kalcona",
+			"Sok",
+			"Pivo"
 	};
 	
-	public Knjizara() {
-		super(SpisakOsoba.PODRAZUMEVAN_KAPACITET);
-	}
 	
+	public Picerija(String imeKompanije, String adresaKompanije) {
+		super(SpisakOsoba.PODRAZUMEVAN_KAPACITET, SpisakOsoba.PODRAZUMEVAN_KAPACITET);
+		this.imeKompanije = imeKompanije;
+		this.adresaKompanije = adresaKompanije;
+	}
+
 	@Override
 	public String pribaviImeProdavnice() {
 		return imeKompanije;
@@ -33,7 +37,7 @@ public class Knjizara extends Prodavnica implements Imenovanje {
 
 	@Override
 	public String[] uzmiIzInventara() {
-		return ponudaKnjiga;
+		return ponudaHrane;
 	}
 
 	@Override
@@ -41,15 +45,16 @@ public class Knjizara extends Prodavnica implements Imenovanje {
 		System.out.println("\nUpravo ste narucili artikal " + artikal);
 	}
 
-
+	
 	public String pribaviAdresu() {
 		return adresaKompanije;
 	}
 
-
+	
 	public void postaviAdresu(String adresa) {
 		this.adresaKompanije = adresa;
 	}
+	
 	
 	public String toString() {
 		return imeKompanije + " " + adresaKompanije;
