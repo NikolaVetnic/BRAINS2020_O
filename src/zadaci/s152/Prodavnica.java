@@ -2,14 +2,37 @@ package zadaci.s152;
 
 public abstract class Prodavnica {
 
-	private SpisakKlijenata spisakKlijenata;
-	private String[] prodavci;
+	
+	protected SpisakKlijenata  spisakKlijenata ;
+	protected SpisakZaposlenih spisakZaposlenih;
+	private float stanjeRacuna;
+	
+	
+	Prodavnica() {}
+	
+	
+	Prodavnica(int maxBrojKlijenata){
+		this.spisakKlijenata = new SpisakKlijenata(maxBrojKlijenata);
+	}
+	
+	
+	public float getStanjeRacuna() {
+		return stanjeRacuna;
+	}
+
+	
+	public void setStanjeRacuna(float stanjeRacuna) {
+		this.stanjeRacuna = stanjeRacuna;
+	}
+
 	
 	public void izracunajPDV() {
 		System.out.println("Stopa PDV je 20%!");
 	}
 	
-	public abstract String[] uzmiInventar();
 	
-	public abstract void kupiInventar(String artikal);
+	public abstract String[] uzmiIzInventara();
+	
+	
+	public abstract void nabaviInventar(String artikal);
 }

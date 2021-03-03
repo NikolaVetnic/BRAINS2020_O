@@ -15,31 +15,29 @@ public class Restoran extends Prodavnica implements Imenovanje {
 	};
 	
 	@Override
-	public String pribaviIme() {
+	public String pribaviImeProdavnice() {
 		return imeKompanije;
 	}
 
 	@Override
-	public void postaviIme(String ime) {
+	public void postaviImeProdavnice(String ime) {
 		this.imeKompanije = ime;
 	}
 
 	@Override
-	public String[] uzmiInventar() {
+	public String[] uzmiIzInventara() {
 		return stavkaMenija;
 	}
 
 	@Override
-	public void kupiInventar(String artikal) {
+	public void nabaviInventar(String artikal) {
 		System.out.println("\nUpravo ste narucili artikal " + artikal);
 	}
 
-	@Override
 	public String pribaviAdresu() {
 		return adresaKompanije;
 	}
 
-	@Override
 	public void postaviAdresu(String adresa) {
 		this.adresaKompanije = adresa;
 	}

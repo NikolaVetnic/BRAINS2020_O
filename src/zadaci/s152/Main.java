@@ -5,23 +5,25 @@ public class Main {
 	public static void main(String[] args) {
 		
 		Poslasticarnica carigrad = new Poslasticarnica();
-		carigrad.postaviIme("Carigrad");
-		carigrad.kupiInventar("Sladoled");
+		carigrad.postaviImeProdavnice("Carigrad");
+		carigrad.nabaviInventar("Sladoled");
 		carigrad.postaviAdresu("Preko puta Izvrsnog veca");
+		System.out.println(carigrad);
 
 		Picerija ciao = new Picerija();
-		ciao.postaviIme("Ciao");
-		ciao.kupiInventar("Pica");
+		ciao.postaviImeProdavnice("Ciao");
+		ciao.nabaviInventar("Pica");
 		ciao.postaviAdresu("Kod Socijalnog");
+		System.out.println(ciao);
 		
 		Restoran r = new Restoran();
-		r.postaviIme("Zal za mladost");
+		r.postaviImeProdavnice("Zal za mladost");
 		r.postaviAdresu("Ka Futogu");
-		r.kupiInventar("Karadjordjeva");
+		r.nabaviInventar("Karadjordjeva");
 		
 		Knjizara k = new Knjizara();
-		k.postaviIme("Bulevar Books");
+		k.postaviImeProdavnice("Bulevar Books");
 		k.postaviAdresu("Kod Brauhausa");
-		k.kupiInventar("Crveni Mars");
+		k.nabaviInventar("Crveni Mars");
 	}
 }
