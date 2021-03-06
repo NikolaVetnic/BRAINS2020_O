@@ -32,7 +32,7 @@ public class SpisakRadnika {
 			
 			for (int i = 0; i < numRadnika; i++) {
 				
-				String status = br.readLine().trim();
+				String status 				= br.readLine().trim();
 				
 				String ime 					= br.readLine().trim();
 				String prezime 				= br.readLine().trim();

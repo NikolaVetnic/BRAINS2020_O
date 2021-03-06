@@ -1,7 +1,5 @@
 package zadaci.s198.zaposleni;
 
-import java.io.PrintWriter;
-
 public class AktivanRadnik extends Radnik {
 	
 	private double varijabilniKoef;
@@ -15,15 +13,6 @@ public class AktivanRadnik extends Radnik {
 			double varijabilniKoef) {
 		super(ime, prezime, jmbg, brRacuna, koefStrucneSpreme);
 		this.varijabilniKoef = varijabilniKoef;
-	}
-
-	@Override
-	public void sacuvajRadnika(PrintWriter pw) {
-		
-		String line = "+ " + ime + " " + prezime + " " + jmbg + " " + brRacuna + " " + koefStrucneSpreme;
-		pw.println(line);
-		
-		System.out.println("Radnik " + ime + " " + prezime + " sacuvan!");
 	}
 
 	@Override
