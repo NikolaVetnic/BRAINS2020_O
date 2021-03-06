@@ -1,4 +1,4 @@
-package zadaci.primer02_02;
+package zadaci.s048;
 
 import java.util.Random;
 

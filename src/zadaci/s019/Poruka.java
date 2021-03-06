@@ -1,4 +1,4 @@
-package zadaci.primer01_01;
+package zadaci.s019;
 
 public class Poruka {
 

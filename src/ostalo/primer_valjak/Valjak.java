@@ -1,4 +1,4 @@
-package zadaci.primer_valjak;
+package ostalo.primer_valjak;
 
 public class Valjak {
 

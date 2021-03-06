@@ -1,4 +1,4 @@
-package zadaci.primer02_04;
+package zadaci.s063b;
 
 import java.util.LinkedList;
 

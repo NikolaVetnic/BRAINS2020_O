@@ -1,4 +1,4 @@
-package zadaci.primer02_03;
+package zadaci.s063a;
 
 public class Transakcija {
 

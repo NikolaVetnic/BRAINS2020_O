@@ -1,4 +1,4 @@
-package zadaci.primer02_01;
+package zadaci.s043;
 
 public class Zaposleni {
 

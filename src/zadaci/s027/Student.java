@@ -1,4 +1,4 @@
-package zadaci.primer01_02;
+package zadaci.s027;
 
 public class Student {
 

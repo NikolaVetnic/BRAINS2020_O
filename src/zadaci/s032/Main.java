@@ -1,4 +1,4 @@
-package zadaci.primer01_04;
+package zadaci.s032;
 
 import java.util.Arrays;
 import java.util.Random;

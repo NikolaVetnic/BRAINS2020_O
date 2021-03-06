@@ -1,4 +1,4 @@
-package zadaci.primer02_04;
+package zadaci.s032;
 
 public class Racunar implements Comparable<Racunar> {
 
@@ -31,6 +31,10 @@ public class Racunar implements Comparable<Racunar> {
 		this.kapacitetMemorije = km;
 		setIndeksPerformansi();
 	}
+	
+	public String procesor() 					{ return this.procesor; 			}
+	public double radniTakt()					{ return this.radniTakt;			}
+	public int kapacitetMemorije()				{ return this.kapacitetMemorije;	}
 	
 	public String toString() {
 		return "[ CPU " + procesor + " ; takt " + radniTakt + " ; RAM " 
