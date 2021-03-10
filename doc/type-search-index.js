@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"zadaci.s198.zaposleni","l":"SpisakRadnika"}];updateSearchResults();

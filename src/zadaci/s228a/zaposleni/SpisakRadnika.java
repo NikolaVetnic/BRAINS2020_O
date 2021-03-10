@@ -1,4 +1,4 @@
-package zadaci.s198.zaposleni;
+package zadaci.s228a.zaposleni;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -6,11 +6,13 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SpisakRadnika {
 
 	
-	private Radnik[] spisak;
+	private List<Radnik> spisak;
 	
 	
 	public SpisakRadnika(String input) {
@@ -35,7 +37,7 @@ public class SpisakRadnika {
 			
 			int numRadnika = Integer.parseInt(br.readLine().trim());
 
-			spisak = new Radnik[numRadnika];
+			spisak = new ArrayList<Radnik>(numRadnika);
 			
 			for (int i = 0; i < numRadnika; i++) {
 				
@@ -50,10 +52,10 @@ public class SpisakRadnika {
 				double varijabilniKoef		= 0.0;
 				
 				if (status.equals("-")) {
-					spisak[i] = new RadnikNaBolovanju(ime, prezime, jmbg, brRacuna, koefStrucneSpreme);
+					spisak.add(new RadnikNaBolovanju(ime, prezime, jmbg, brRacuna, koefStrucneSpreme));
 				} else {
 					varijabilniKoef 		= Double.parseDouble(br.readLine().trim());
-					spisak[i] = new AktivanRadnik(ime, prezime, jmbg, brRacuna, koefStrucneSpreme, varijabilniKoef);
+					spisak.add(new AktivanRadnik(ime, prezime, jmbg, brRacuna, koefStrucneSpreme, varijabilniKoef));
 				}
 			}
 			
@@ -73,7 +75,7 @@ public class SpisakRadnika {
 	public void sacuvajPlatniSpisak(String imeFajla) {
 		
 		try (PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("res//" + imeFajla + ".txt")))) {
-			for (int i = 0; i < spisak.length; i++) pw.println(spisak[i]);
+			for (Radnik r : spisak) pw.println(r);
 		} catch (IOException e) {
 			System.err.println(e.getMessage());
 		}
