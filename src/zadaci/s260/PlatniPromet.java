@@ -73,10 +73,11 @@ public class PlatniPromet {
 		r0.setStanje(r0.stanje() - iznos);
 		r1.setStanje(r1.stanje() + iznos);
 		
-		String t = b0.naziv().toUpperCase() + " " + r0.broj() + " -" + iznos + " | " + 
+		String t = "[e] " + 
+				   b0.naziv().toUpperCase() + " " + r0.broj() + " -" + iznos + " | " + 
 				   b1.naziv().toUpperCase() + " " + r1.broj() + " +" + iznos;
 		
-		System.out.println("Obavljena EKSTERNA transakcija: " + t);
+		System.out.println("Obavljena EKSTERNA transakcija: " + t + "\n");
 		b0.transakcije().dodajTransakciju(t);
 		b1.transakcije().dodajTransakciju(t);
 	}

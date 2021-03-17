@@ -34,5 +34,6 @@ public class Racun {
 	public TipRacuna tip() 	{ return tip; 		}
 	public double stanje() 	{ return stanje; 	}
 	
+	
 	public void setStanje(double s) { this.stanje = s; 	}
 }

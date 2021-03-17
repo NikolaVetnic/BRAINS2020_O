@@ -79,10 +79,10 @@ public class Banka implements RadSaTransakcijama {
 		r0.setStanje(r0.stanje() - iznos);
 		r1.setStanje(r1.stanje() + iznos);
 		
-		String t = r0.broj() + " -" + iznos + " | " + r1.broj() + " +" + iznos;
+		String t = "[i] " + r0.broj() + " -" + iznos + " | " + r1.broj() + " +" + iznos;
 
-		System.out.println("Obavljena INTERNA transakcija: " + t);
-		this.transakcije.dodajTransakciju(r0.broj() + " -" + iznos + " | " + r1.broj() + " +" + iznos);
+		System.out.println("Obavljena INTERNA transakcija: " + t + "\n");
+		this.transakcije.dodajTransakciju(t);
 	}
 
 

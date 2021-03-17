@@ -18,7 +18,6 @@ public class Main {
 				b0.klijenti().pronadjiKlijenta("0000000000001"), 
 				b0.klijenti().pronadjiKlijenta("0000000000002"), 
 				(float) 50.0);
-		System.out.println();
 		
 		b0.transakcije().stampaj();
 		
@@ -30,14 +29,26 @@ public class Main {
 		
 		p.dodajBanku(b0);
 		p.dodajBanku(b1);
+
+		b0.transakcije().stampaj();
+		b1.transakcije().stampaj();
 		
-		p.izvrsiEksternuTransakciju(
-				b0, b0.klijenti().pronadjiKlijenta("0000000000001"), 
-				b1, b1.klijenti().pronadjiKlijenta("0000000000001"), 
-				(float) 50.0);
-		System.out.println();
+		try {
+			p.izvrsiEksternuTransakciju(
+					b0, b0.klijenti().pronadjiKlijenta("0000000000001"), 
+					b1, b1.klijenti().pronadjiKlijenta("0000000000002"), 
+					(float) 50.0);
+		} catch (IllegalArgumentException e) {
+			System.err.println(e.getMessage());
+		}
 		
 		b0.transakcije().stampaj();
 		b1.transakcije().stampaj();
+		
+		b0.otvoriRacun("0000000000001", true);
+		b0.otvoriRacun("0000000000001", true);
+		b0.otvoriRacun("0000000000001", true);
+		
+		b0.racuni().stampaj();
 	}
 }

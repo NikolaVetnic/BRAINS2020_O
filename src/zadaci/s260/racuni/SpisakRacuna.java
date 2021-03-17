@@ -70,7 +70,7 @@ public class SpisakRacuna implements RadSaFajlovima {
 				}
 			}
 			
-			SpisakRacuna.nr.setCounter(maxInt);
+			SpisakRacuna.nr.setCounter(maxInt + 1);
 			
 		} catch (IOException e) {
 			System.err.println(e.getMessage());
@@ -101,14 +101,4 @@ public class SpisakRacuna implements RadSaFajlovima {
 		
 		System.out.println();
 	}
-	
-	
-//	public static void main(String[] args) {
-//		
-//		SpisakRacuna s = SpisakRacuna.prazan();
-//		s.ucitajIzFajla("s260_racuni");
-//		for (Racun r : s.racuni) System.out.println(r);
-//		s.upisiUFajl("s260_AAA");
-//		
-//	}
 }
