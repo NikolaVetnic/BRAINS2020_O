@@ -1,0 +1,10 @@
+0000000000001 Zika Zikic Djordja_Magarasevica 063\111-1111
+0000000000004 Paja Pajic Tekelijina 064\222-2222
+0000000000002 Tika Tikic Vladimira_Nazora 065\333-3333
+0000000000007 Saba Saban Gospodara_Vucica 061\111-1111
+0000000000003 Maja Makic Laze_Nancica 066\222-2222 Greska
+0000000000005 Kika Kikic Vardarska 063\555-5555
+0000000000010 Mile Snajp Dalmatinska 066\666-6666
+0000000000006 Mile Kitic Edvarda_Kardelja 062\123-4567 Greska
+0000000000008 Rama Ramiz Sime_Solaje 065\098-7654
+0000000000009 Zoki Hauba Partizanska 063\123-1234
