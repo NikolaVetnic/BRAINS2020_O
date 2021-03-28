@@ -1,0 +1,3 @@
+Ime: Petar, prezime: Petrović, adresa: Njegoševa_2, broj telefona: 060000000
+Ime: Jovan, prezime: Jovanović, adresa: Puškinova_5, broj telefona: 061111111
+Ime: Marko, prezime: Marković, adresa: Bulevar_Jaše_Tomića_10, broj telefona: 062222222
